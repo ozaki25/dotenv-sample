@@ -8,8 +8,10 @@
     "start:command": "TEST_VALUE='test value from command' node index.js",
     "start:babel:dotenv": "babel-node index.js",
     "start:babel:command": "TEST_VALUE='test value from command' babel-node index.js",
-    "build:webpack": "webpack -p index.webpack.js",
-    "start:webpack": "node index.js"
+    "build:webpack:dotenv": "webpack -p index.webpack.js",
+    "build:webpack:command": "TEST_VALUE='test value from command' webpack -p index.webpack.js",
+    "start:webpack:dotenv": "yarn build:webpack:dotenv; node dist/main.js",
+    "start:webpack:command": "yarn build:webpack:command; node dist/main.js"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
