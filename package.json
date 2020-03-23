@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start:dotenv": "node index.js",
+    "start:command": "TEST_VALUE='test value from command' node index.js"
+  },
   "dependencies": {
     "dotenv": "^8.2.0"
   }
